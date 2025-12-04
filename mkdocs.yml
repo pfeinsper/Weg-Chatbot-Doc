@@ -1,0 +1,93 @@
+site_name: TCC - Chatbot RAG WEG
+site_author: Henrique Fazzio Badin, Eduardo Selber Castanho, Luca Caruso e Felipe Affonso Ribeiro de Maia
+repo_url: https://github.com/pfeinsper/202502_WEG_chatbot_AWS
+repo_name: github.com/pfeinsper/202502_WEG_chatbot
+site_url: https://pfeinsper.github.io/202502_WEG_chatbot_AWS/
+theme:
+  name: material
+  palette:
+    # primary: grey
+    # Light mode
+    - scheme: default
+      primary: grey
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: grey
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      primary: grey
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: grey
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to system preference
+  features:
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.tooltips
+    - content.tabs.link
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.top
+    - navigation.path
+    - navigation.tracking
+    - navigation.expand
+    - navigation.tabs
+    - navigation.sections
+
+nav:
+  - Home:
+      - Introdução: index.md
+      - Getting Started: getting-started.md
+  - Implementation: implementation.md
+  - Deployment: aws_deploy.md
+  - Examples: examples.md
+  - References: references.md
+
+markdown_extensions:
+  - pymdownx.extra
+
+plugins:
+  - glightbox
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - git-authors
+  - git-committers:
+      repository: https://github.com/pfeinsper/202502_WEG_chatbot_AWS
+      branch: main
+  - search
+  - badges
+  - minify:
+      minify_html: true
+  - render_swagger:
+      allow_arbitrary_locations : true
+  - termynal:
+      prompt_literal_start:
+        - "$"
+        - ">"
+
+# Instalações:
+# pip install termynal
+# pip install mkdocs-render-swagger-plugin
+# pip install mkdocs-minify-plugin    
+# pip install mkdocs-badges    
+# pip install mkdocs-git-committers-plugin-2
+# pip install mkdocs-git-authors-plugin
+# pip install mkdocs-glightbox
+# pip install pymdown-extensions
